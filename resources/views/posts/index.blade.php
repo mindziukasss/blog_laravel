@@ -40,5 +40,4 @@
         </tbody>
       </table>
     </div>
- pramary
 @stop
