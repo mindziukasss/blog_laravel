@@ -12,35 +12,14 @@
 </div>
 <div class="row">
   <div class="col-md-8">
+  @foreach($posts as $post)
     <div class="post">
-      <h3>Post Title</h3>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-      <a href="#" class="btn btn-primary">Read More</a>
-
-      <hr>
-
+      <h3>{{ $post->title }}</h3>
+      <p>{{ substr($post->body, 0, 250) }}{{ strlen($post->body) > 250 ? "..." : "" }} </p>
+      <a href="{{route('posts.show', $post->id)}}" class="btn btn-primary">Read More</a>
     </div>
-    <div class="post">
-      <h3>Post Title</h3>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-      <a href="#" class="btn btn-primary">Read More</a>
-    </div>
-
     <hr>
-
-    <div class="post">
-      <h3>Post Title</h3>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-      <a href="#" class="btn btn-primary">Read More</a>
-    </div>
-
-    <hr>
-
-    <div class="post">
-      <h3>Post Title</h3>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-      <a href="#" class="btn btn-primary">Read More</a>
-    </div>
+    @endforeach
   </div>
     <div class="col-md-3 col-md-offset-1">
       <h2>Sidebar</h2>
