@@ -16,7 +16,7 @@
     <div class="post">
       <h3>{{ $post->title }}</h3>
       <p>{{ substr($post->body, 0, 250) }}{{ strlen($post->body) > 250 ? "..." : "" }} </p>
-      <a href="{{route('posts.show', $post->id)}}" class="btn btn-primary">Read More</a>
+      <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-primary">Read More</a>
     </div>
     <hr>
     @endforeach
