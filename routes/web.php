@@ -12,6 +12,7 @@
 */
 
 Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
 Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
 Route::get('contact', 'PagesController@getContact');
