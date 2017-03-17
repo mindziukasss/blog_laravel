@@ -44,4 +44,5 @@
         {!! $posts->links() !!}
       </div>
     </div>
+    
 @stop
