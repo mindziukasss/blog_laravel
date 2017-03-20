@@ -10,6 +10,11 @@
       <p>{{ $post['body'] }}</p>
       <hr>
       <p>Posted In: {!! $post->category->name !!}</p>﻿
+      <div class="tags">
+        @foreach($post->tags as $tag)
+          <span class="label label-default">{{ $tag->name }}</span>
+        @endforeach
+      </div>
     </div>
   </div>
 
