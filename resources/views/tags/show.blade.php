@@ -7,7 +7,12 @@
   <div class="row">
     <div class="col-md-8">
       <h1>{{ $tag->name }} Tag <small>{{ $tag->posts()->count() }} Posts</small>
-      <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-primary">Edit</a></h1>
+      <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-primary pull-right">Edit</a></h1>
+    </div>
+    <div class="col-md-4"> 
+      {{ Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) }}
+        {{ Form::submit('Delete', ['class' => 'btn btn-danger form-spacing-top']) }}
+      {{ Form::close() }}
     </div>
   </div>
 

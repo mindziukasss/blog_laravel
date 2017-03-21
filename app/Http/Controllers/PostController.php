@@ -160,6 +160,7 @@ public function update(Request $request, $id)
 public function destroy($id)
 {
     $post = Post::find($id);
+    $post->tags()->detach();
     $post->delete();
     Session::flash('success' , 'The blog post was successfully delete!');
 
