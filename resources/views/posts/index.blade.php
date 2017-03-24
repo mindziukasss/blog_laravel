@@ -23,6 +23,7 @@
         <thead>
           <th>#</th>
           <th>Title</th>
+          <th>Picture</th>
           <th>Created At</th>
           <th></th>
         </thead>
@@ -32,6 +33,7 @@
             <tr>
               <th>{{ $post->id }}</th>
               <td>{{ $post->title }}</td>
+              <td><img src="{{ asset('images/' . $post->image) }}" height="25" width="30" ></td>
               <td>{{ substr(strip_tags($post->body), 0, 50) }}{{ strlen(strip_tags($post->body)) > 50 ? "..." : "" }}</td>
               <td>{{ date('M j, Y', strtotime($post->created_at)) }}</td>
               <td><a href="{{route('posts.show', $post->id)}}" class="btn btn-primary">View</a>

@@ -13,8 +13,8 @@
 
       @yield('content')
 
+      
       @include('partials._footer')
-
     </div>
 
     @include('partials._javascript')
