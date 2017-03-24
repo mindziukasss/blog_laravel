@@ -16,7 +16,11 @@
     <div class="post">
       <h3>{{ $post->title }}</h3>
       <div class="col-md-2">
-        <img src="{{ asset('images/' . $post->image) }}" height="80" width="105" >
+        @if($post->image)
+          <img src="{{ asset('images/' . $post->image) }}" height="80" width="105" >
+        @else
+          <img src="{{ asset('images/nofoto.png') }}" height="80" width="105" >
+        @endif
       </div>
       <div class="row">
         <div class="col-md-8">
