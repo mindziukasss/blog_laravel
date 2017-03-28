@@ -15,6 +15,6 @@ class UserController extends Controller
   }
 
   public function getProfile(){
-    return view('profile.profile',array('user' => Auth::user()) );;
+    return view('profile.profile',array('user' => Auth::user()) );
   }
 }
