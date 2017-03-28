@@ -22,7 +22,9 @@
       <ul class="nav navbar-nav navbar-right">
       @if (Auth::check())
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="avatar-nav">
+          <img src="/uploads/avatars/{{ Auth::user()->avatar }}" id="avatar"> 
+            {{ Auth::user()->name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{ url('profile/profile') }}">My profile</a></li>
             <li><a href="{{ route('posts.index') }}">Posts</a></li>
