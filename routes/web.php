@@ -15,6 +15,7 @@ Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('profile/profile', 'UserController@getProfile');
+Route::post('profile/profile', 'UserController@postAvatar');
 
 
 
