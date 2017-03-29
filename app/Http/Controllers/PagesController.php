@@ -7,6 +7,7 @@ use App\Post;
 use Mail;
 use Session;
 
+
 class PagesController extends Controller {
 
 
@@ -16,14 +17,8 @@ class PagesController extends Controller {
   }
 
   public function getAbout() {
-    $first = "Jon";
-    $last = "Short";
-
-    $fullname = $first . " " . $last;
-    $email = "jonshort@test.com";
+    
     $data = [];
-    $data['fullname'] = $fullname;
-    $data['email'] = $email;
     return view('pages.about')->withData($data);
   }
 

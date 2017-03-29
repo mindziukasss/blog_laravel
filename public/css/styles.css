@@ -69,4 +69,19 @@
   border-radius:50%;
 }
 
+#avatar-profile {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.about-foto {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 25px;
+}
 
